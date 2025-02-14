@@ -1,0 +1,5 @@
+flask
+SpeechRecognition
+pyaudio
+openai
+flask-cors

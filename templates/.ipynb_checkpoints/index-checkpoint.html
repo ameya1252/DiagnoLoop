@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audio Recorder</title>
+  <style>
+    button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Audio Recorder</h1>
+  <button id="start-btn">Start Recording</button>
+  <button id="stop-btn" disabled>Stop Recording</button>
+  <div id="transcript"></div>
+
+  <script>
+    const startBtn = document.getElementById('start-btn');
+    const stopBtn = document.getElementById('stop-btn');
+    const transcriptDiv = document.getElementById('transcript');
+
+    startBtn.addEventListener('click', async () => {
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
+      try {
+        await fetch('/start_recording', { method: 'POST' });
+      } catch (error) {
+        console.error('Error starting recording:', error);
+      }
+    });
+
+    stopBtn.addEventListener('click', async () => {
+      stopBtn.disabled = true;
+      startBtn.disabled = false;
+      try {
+        const response = await fetch('/stop_recording', { method: 'POST' });
+        const data = await response.json();
+        transcriptDiv.innerText = `
+          Transcript: ${data.transcript}
+          \nKey Info: ${data.key_info}
+          \nPredictions: ${data.predictions}
+        `;
+      } catch (error) {
+        console.error('Error stopping recording:', error);
+      }
+    });
+  </script>
+</body>
+</html>

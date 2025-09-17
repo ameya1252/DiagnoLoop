@@ -1,8 +1,9 @@
 # DiagnoLoop: A Hybrid LLM and Knowledge-Based System for Iterative Medical Diagnosis
 
-**Authors**  
-Anish Parkhe, Bhushan Shankar Halasagi, Vedant Jayesh Oza, Akash Dudhane,  
-Ambarish Kshirsagar, Ameya Deshmukh  
+**Authors** 
+
+**Ameya Deshmukh**, Anish Parkhe, Bhushan Shankar Halasagi, Vedant Jayesh Oza, Akash Dudhane,  
+Ambarish Kshirsagar 
 
 University of Southern California  
 

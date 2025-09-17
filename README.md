@@ -3,6 +3,7 @@
 **Authors**  
 Anish Parkhe, Bhushan Shankar Halasagi, Vedant Jayesh Oza, Akash Dudhane,  
 Ambarish Kshirsagar, Ameya Deshmukh  
+
 University of Southern California  
 
 ---

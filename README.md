@@ -20,6 +20,8 @@ Our hybrid pipeline:
 5. Generates ranked diagnoses using a **fine-tuned GPT-4.1-mini** model.
 6. Refines results through an **Infermedica knowledge graph** and iterative **LLM-driven Q&A loops**.
 
+<img width="715" height="421" alt="Screenshot 2025-09-16 at 6 08 15 PM" src="https://github.com/user-attachments/assets/3b49eaac-9e41-45a2-8ddf-75ac532330ea" />
+
 ---
 
 ## 🔑 Key Features
